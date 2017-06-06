@@ -1,0 +1,69 @@
+etat(id, libelle)
+clé primaire : id
+
+
+formation(id, libelle, description)
+clé primaire : id
+
+
+specialite(id,libelle)
+clé primaire : id
+
+
+visiteur(id, nom, prenom, login, mdp, adresse, cp, ville, dateEmbauche)
+clé primaire : id
+
+
+fichefrais(idVisiteur, mois, nbJustificatifs, montantValide, dateModif, idEtat)
+clé primaire : idVisiteur, mois
+
+
+fraisforfait(id, libelle, montant)
+clé primaire : id
+
+
+delegue(idVisiteur, idDelegue)
+clé primaire : idVisiteur, idDelegue
+clé étrangère : idVisiteur provenant de id dans la table visiteur
+clé étrangère : idDelegue provenant de id dans la table delegue
+
+
+responsable(idDelegue, idResponsable)
+clé primaire : idDelegue, idResponsable
+clé étrangère : idDelegue provenant de id dans la table delegue
+clé étrangère : idResponsable provenant de id dans la table responsable
+
+
+
+avoir(idVisiteur, idSpecialite)
+clé primaire : idVisiteur, idSpecialite
+clé étrangère : idVisiteur provenant de id dans la table visiteur
+clé étrangère : idSpecialite provenant de id dans la table specialite
+
+
+convenir(idFormation, idSpecialite)
+clé primaire : idFormation, idSpecialite
+clé étrangère : idFormation provenant de id dans la table formation
+clé étrangère : idSpecialite provenant de id dans la table specialite
+
+
+inscription(idVisiteur, idFormation, valide)
+clé primaire : idVisiteur, idFormation
+clé étrangère : idVisiteur provenant de id dans la table visiteur
+clé étrangère : idFormation provenant de id dans la table formation
+
+
+session(id, date, idFormation, nombrePlace)
+clé primaire : id, idFormation
+clé étrangère : idFormation provenant de id dans la table formation
+
+
+lignefraishorsforfait(id, idVisiteur, mois, libelle, date, montant)
+clé primaire : id
+clé étrangère : idVisiteur provenant de id dans la table visiteur
+
+
+lignefraisforfait(idVisiteur, mois, idFraisForfait ,quantite)
+clé primaire : idVisiteur, mois, idFraisForfait
+clé étrangère : idVisiteur provenant de id dans la table visiteur
+clé étrangère : idFraisForfait provenant de id dans la table fraisforfait

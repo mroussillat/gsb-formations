@@ -1,0 +1,83 @@
+* {
+    font-family: Lato;
+}
+
+.container {
+    background-color: white;
+}
+
+.nav-container, .navbar-default {
+    background-color: #77AADD;
+}
+
+.nav-container .navbar-nav>li>a {
+    color: white;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    display: inline;
+    padding: 0;
+    margin-left: 0;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-brand img {
+    height: 47px;
+    margin: -14px;
+}
+
+.content {
+    padding-top: 20px;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #77AADD;
+    border-color: #77AADD;
+}
+
+.panel-primary {
+    border-color: #77AADD;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+.jumbotron h2 {
+    text-transform: uppercase;
+}
+
+.table thead {
+    background-color: #77AADD;
+    color: white;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.table > thead > tr > th {
+    border: 0px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
